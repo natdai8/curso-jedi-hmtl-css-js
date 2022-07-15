@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(244, 215, 178); 
+    font-family: didot;   
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.titulo{
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.img-main {
+    height: 300px;
+    width: 300px;
+    border:5px solid rgb(149, 137, 123);
+    border-radius: 300px;
+    padding: 6px;
+}
+
+.resize-img {
+    height: 250px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .hide-carousel {
+        display: none;
+    }
+}

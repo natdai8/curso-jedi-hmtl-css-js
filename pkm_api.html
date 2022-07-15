@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="pkm_api.css">
+        <script src="pkm_api.js"></script>
+        <title>Pokemon API table</title>
+    </head>
+    <body class="fondo">
+        <br>
+        <h1 class="centrar">Pokédex</h1>
+        <br>
+        <div class="table-size">
+            <table class="table resize h-100">
+                <thead>
+                    <tr class="row m-0">
+                        <th class="col-2 centrar linea">Número</th>
+                        <th class="col-2 centrar linea">Foto</th>
+                        <th class="col-2 centrar linea">Foto shiny</th>
+                        <th class="col-2 centrar linea">Nombre</th>
+                        <th class="col-2 centrar linea">Tipo(s)</th>
+                        <th class="col-2 centrar linea">HM</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr class="row m-0 h-100">
+                        <th class="col-2 centrar linea inject"></th>
+                        <th class="col-2 centrar linea inject"></th>
+                        <th class="col-2 centrar linea inject"></th>
+                        <th class="col-2 centrar linea inject"></th>
+                        <th class="col-2 centrar linea inject"></th>
+                        <th class="col-2 centrar linea inject"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="busqueda">
+            <button class="btn btn-primary" type="button"><</button>
+            <input class="texto" min="0" type="search" placeholder="Número o nombre del pokémon"/>
+            <button class="btn" type="submit">submit</button>
+            <button class="btn btn-primary" type="button">></button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="pkm_api.css" />
+
+        <title>Pokemon API</title>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/ddc0b1413b.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="pkm_api.js"></script> -->
+        <script src="pkm_api_good_practices.js"></script>
+    </head>
+
+    <body>
+        <main class="table-responsive w-75">
+            <h3 class="text-center">Pokemon API Table</h3>
+            <table class="poke-table table table-bordered ">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" >Num</th>
+                        <th scope="col" class="sprite">Normal Sprite</th>
+                        <th scope="col" class="sprite">Shiny Sprite</th>
+                        <th scope="col" >Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">HM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="api-data">
+                        <th scope="row" class="center"></th>
+                        <td class="center sprite"></td>
+                        <td class="center sprite"></td>
+                        <td class="center"></td>
+                        <td class="center"></td>
+                        <td class="center"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="container actions">
+                <button id="previous" class="tool" >
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <input type="search" name="poke-find" id="search" class="tool"
+                    placeholder="Nombre o número del pokemon a buscar ... " />
+                <button id="send-search" class="tool">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="next" class="tool">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
